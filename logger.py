@@ -1,9 +1,6 @@
 #!/usr/bin/env /opt/ftp_file_watcher/bin/python
 #-*- coding: utf-8 -*-
 
-# LOG_FILE = "/var/log/ftp_watcher.log"
-# LOG_FILE = "./test.log"
-
 import logging.handlers
  
 class Logger(logging.Logger):
