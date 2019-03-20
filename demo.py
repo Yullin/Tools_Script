@@ -1,4 +1,4 @@
-#!/usr/bin/env /opt/ftp_file_watcher/bin/python
+#!/usr/bin/env python
 #-*- coding: utf-8 -*-
 
 from logger_class import Logger
