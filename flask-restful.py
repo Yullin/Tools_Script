@@ -10,7 +10,7 @@ api = Api(app)
 
 ARGS = {
     'system': 'linux',
-    'ip': '10.2.8.254',
+    'ip': 'xxx.xxx.xxx.254',
     'vlan': 13,
 }
 
