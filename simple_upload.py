@@ -8,9 +8,29 @@ server = flask.Flask(__name__, static_folder='static')
 if not os.path.exists(os.path.curdir+'/static'):
     os.mkdir('./static')
 
+template = """
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+</style>
+</head>
+<body>
+    <div style="border:1px gray solid;width:300px;height:300px;margin:auto;margin-top:5%">
+        <form action="/upload" method="post" enctype="multipart/form-data" style="margin:auto; margin-top:5%">
+            <input type="file" id="img" name="img" style="margin:auto;margin-bottom:5%">
+            <br>
+            <button type="submit" style="margin:auto">上传</button>
+        </form>
+    </div>
+</body>
+</html>
+"""
+
 @server.route('/', methods=['get'])
 def index():
-    return '<form action="/upload" method="post" enctype="multipart/form-data"><input type="file" id="img" name="img"><button type="submit">上传</button></form>'
+    # return '<form action="/upload" method="post" enctype="multipart/form-data"><input type="file" id="img" name="img"><button type="submit">上传</button></form>'
+    return template
 
 @server.route('/upload', methods=['post'])
 def upload():
